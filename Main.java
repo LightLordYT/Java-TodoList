@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-//TODO[0] save data to file
+//TODO[0] save data to file (NO java sucks with files frick u java)
 
 class Main {
     static ArrayList<String> todos = new ArrayList<String>();
@@ -74,7 +74,7 @@ class Main {
 
     static void ask(){
 	Scanner scanner = new Scanner(System.in);
-	System.out.println("Add a todo(y), Remove a todo(r), Quit(q)?");
+	System.out.println("Add a todo(y), Quit(q)?");
 	String output = scanner.nextLine();
 	switch (output){
 	case "y":
@@ -82,8 +82,6 @@ class Main {
 	    break;
 	case "q":
 	    System.exit(0);
-	case "r":
-	    removeTodo();
 	}
     }
     
