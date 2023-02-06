@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+class Main {
+    //use ArrayList instead
+    String[] todos = new String[0];
+    
+    static int removeTodo(){
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Remove Todo: ");
+	String output = scanner.nextLine();
+	if(output instanceof String) {
+	    //remove todos
+	    return 0;
+	}else{
+	    System.out.println("invalid input");
+	}
+	return 0;
+    }
+
+    static int newTodo(){
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("New Todo: ");
+	String output = scanner.nextLine();
+	if(output instanceof String) {
+	    todos[todos.length + 1] = output;
+	    System.out.println(todos.length);
+	    //push onto todos
+	    return 0;
+	}else{
+	    System.out.println("invalid input");
+	}
+	return 0;
+    }
+
+    static void ask(){
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Add a todo(y, n, remove)?");
+	String output = scanner.nextLine();
+	switch (output){
+	case "y":
+	    newTodo();
+	    break;
+	case "n":
+	    break;
+	case "remove":
+	    removeTodo();
+	}
+    }
+    
+    public static void main(String[] args){
+	//todolist	
+	System.out.println("Todolist");
+	ask();
+    }
+}
